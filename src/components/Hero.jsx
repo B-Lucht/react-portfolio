@@ -32,6 +32,15 @@ const Hero = () => {
               Full Stack Developer
             </motion.span>
 
+            <motion.span
+              variants={container(-100, 0.7)}
+              initial="hidden"
+              animate="visible"
+              className="text-xl mt-2 text-neutral-400"
+            >
+              B.IT (Cyber Security) - GPA: 6.958
+            </motion.span>
+
             <motion.p
               variants={container(-100, 1)}
               initial="hidden"
