@@ -2,6 +2,7 @@ import profilePic from "../assets/brodie1.png";
 import { HERO_TEXT } from "../constants/content";
 import { motion } from "motion/react";
 import resume from "../assets/resume.pdf";
+import { scrollToElementSmoothly } from "../utils";
 
 const container = (offset, delay) => ({
   hidden: { x: offset, opacity: 0 },
@@ -10,15 +11,15 @@ const container = (offset, delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-800 pb-4 lg:mb-35">
+    <section id="hero" className="border-b border-primary pb-12">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-centerlg:items-start">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.h1
               variants={container(-100, 0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="pb-16 text-6xl text-white font-thin tracking-tight lg:mt-16 lg:text-8xl"
             >
               Brodie Lucht
             </motion.h1>
@@ -27,55 +28,68 @@ const Hero = () => {
               variants={container(-100, 0.5)}
               initial="hidden"
               animate="visible"
-              className="bg-gradient-to-r from-[#d1b161] via-[#c9ba75] to-[#f3f0a7] bg-clip-text text-3xl tracking-tight text-transparent"
+              className="text-hero"
             >
-              Full Stack Developer
+              IT Graduate • Cyber Security • Developer
             </motion.span>
 
             <motion.span
               variants={container(-100, 0.7)}
               initial="hidden"
               animate="visible"
-              className="text-xl mt-2 text-neutral-400"
+              className="text-xl mt-2 text-gray"
             >
-              B.IT (Cyber Security) - GPA: 6.958
+              Bachelor of Information Technology - GPA: 6.958
             </motion.span>
 
             <motion.p
               variants={container(-100, 1)}
               initial="hidden"
               animate="visible"
-              className="my-2 max-w-xl py-6"
+              className="my-2 max-w-xl py-6 body-md"
             >
               {HERO_TEXT}
             </motion.p>
 
-            <motion.a
-              variants={container(-100, 1)}
+            <motion.div
+              variants={container(-100, 0.9)}
               initial="hidden"
               animate="visible"
-              href={resume}
-              download="Brodie_Lucht_Resume.pdf"
-              className="mt-4 md:w-1/2 inline-block rounded-3xl py-2 border-4 border-[#d1b161] text-center text-[#d1b161] transition hover:bg-[#d1b161] hover:text-neutral-950"
+              className="mt-6 flex flex-col sm:flex-row gap-sm-c"
             >
-              Download Resume
-            </motion.a>
+              <a
+                href={resume}
+                download="Brodie_Lucht_Resume.pdf"
+                className="rounded-3xl px-6 py-2 border-2 border-[#d1b161] text-[#d1b161] hover:bg-[#d1b161] hover:text-neutral-950 transition"
+              >
+                Download Resume
+              </a>
+              <a
+                onClick={() => scrollToElementSmoothly("contact")}
+                className="cursor-pointer rounded-3xl px-6 py-2 border-2 border-neutral-700 text-neutral-300 hover:bg-neutral-700 transition"
+              >
+                Contact Me
+              </a>
+            </motion.div>
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex justify-center">
-            <motion.img
-              variants={container(100, 1.5)}
-              initial="hidden"
-              animate="visible"
+        <div className="w-full lg:w-1/2 lg:p-12">
+          <motion.div
+            variants={container(100, 1)}
+            initial="hidden"
+            animate="visible"
+            className="flex justify-center"
+          >
+            <img
               src={profilePic}
               alt="Brodie Lucht"
+              className="rounded-2xl shadow-lg"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

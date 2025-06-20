@@ -9,36 +9,38 @@ const container = (offset, delay) => ({
 
 const About = () => {
   return (
-    <div className="border-b border-neutral-800 pb-4">
-      <h1 className="my-20 text-center text-4xl">
-        About
-        <span className="text-neutral-500"> Me</span>
-      </h1>
+    <section id="about" className="border-b border-primary pb-12">
+      <h3 className="my-20 text-center">About Me</h3>
 
-      <div className="flex flex-wrap">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-md-c">
+        {/* Image Block */}
         <motion.div
-          variants={container(-100, 0.5)}
+          variants={container(-100, 0)}
           initial="hidden"
           whileInView="visible"
-          className="w-full lg:w-1/2 pr-4"
+          viewport={{ once: true, amount: 0.4 }}
+          className="w-full lg:w-1/2 p-sm-c"
         >
-          <div className="flex items-center justify-center">
-            <img className="rounded-2xl" src={aboutImg} alt="about" />
-          </div>
+          <img
+            src={aboutImg}
+            alt="Brodie Lucht Portrait"
+            className="rounded-2xl shadow-lg"
+          />
         </motion.div>
 
+        {/* Text Block */}
         <motion.div
           variants={container(100, 0.5)}
           initial="hidden"
           whileInView="visible"
-          className="w-full lg:w-1/2"
+          className="w-full lg:w-1/2 px-6"
         >
-          <div className="flex justify-center lg:justify-start">
-            <p>{ABOUT_TEXT}</p>
+          <div className="body-lg leading-relaxed whitespace-pre-line">
+            {ABOUT_TEXT}
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

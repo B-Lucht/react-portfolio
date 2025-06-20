@@ -1,3 +1,111 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  button {
+    @apply cursor-pointer transition duration-200 ease-in-out disabled:cursor-not-allowed;
+  }
+
+  p {
+    @apply body-md text-gray;
+  }
+
+  h1 {
+    @apply font-bold text-white tracking-normal text-[32px] md:text-[44px] lg:text-[72px];
+  }
+  h2 {
+    @apply text-[28px] text-white md:text-[34px] font-bold tracking-normal lg:text-[51px];
+  }
+  h3 {
+    @apply font-semibold text-white tracking-normal text-[24px] md:text-[30px] lg:text-[40px];
+  }
+  h4,
+  .h4 {
+    @apply font-semibold text-white leading-[1.2] tracking-normal text-[18px] lg:text-[24px];
+  }
+  .body-lg {
+    @apply tracking-normal text-[16px] lg:text-[18px];
+  }
+  .body-md {
+    @apply text-neutral-300 tracking-normal text-[14px] lg:text-[16px];
+  }
+  .body-sm {
+    @apply text-neutral-300 tracking-normal text-[12px] lg:text-[14px];
+  }
+  .body-xs {
+    @apply text-neutral-300 tracking-normal text-[10px] lg:text-[12px];
+  }
+
+  .btn-text {
+    @apply text-[12px] leading-normal tracking-normal md:text-[13px] lg:text-[14px];
+  }
+  .nav-text {
+    @apply  tracking-normal text-[12px];
+  }
+  .footer-text {
+    @apply  tracking-normal text-[10px] lg:text-[12px];
+  }
+
+  /* Layout Spacing */
+  .w-responsive {
+    @apply mx-auto w-full px-8 sm:w-[375px] md:w-[720px] lg:px-0 lg:w-[980px];
+  }
+
+  .gap-sm-c {
+    @apply gap-4 lg:gap-6;
+  }
+  .gap-md-c {
+    @apply gap-7 lg:gap-12;
+  }
+  .gap-lg-c {
+    @apply gap-12 lg:gap-20;
+  }
+  .gap-xl-c {
+    @apply gap-20 lg:gap-24 xl:gap-40;
+  }
+
+  .p-sm-c {
+    @apply p-4 lg:p-6;
+  }
+  .p-md-c {
+    @apply p-7 lg:p-12;
+  }
+  .p-lg-c {
+    @apply p-14 lg:p-20;
+  }
+
+  /* TEXT COLOURS */
+  .text-dark {
+    @apply text-black;
+  }
+
+  .text-gray {
+    @apply text-[#6B7280];
+  }
+
+  .text-icons {
+    @apply text-[#9CA3AF];
+  }
+  .text-hero {
+    @apply bg-gradient-to-r from-[#d1b161] via-[#c9ba75] to-[#f3f0a7] bg-clip-text text-3xl tracking-tight text-transparent
+  }
+
+  /* SURFACE COLOURS */
+  .surface-secondary {
+    @apply bg-neutral-900 ;
+  }
+
+  .surface-white {
+    @apply bg-white;
+  }
+
+  /* BORDER COLOURS */
+  .border-primary {
+    @apply border-neutral-800;
+  }
+
+  .border-secondary {
+    @apply border-gray-300;
+  }
+}

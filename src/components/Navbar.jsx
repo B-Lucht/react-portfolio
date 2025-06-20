@@ -9,7 +9,7 @@ const Navbar = () => {
         <img src={logo} alt="Logo" className="w-20 h-15" />
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-        <FaLinkedin />
+        {/* <FaLinkedin */}
         <a
           href="https://github.com/B-Lucht"
           target="_blank"
@@ -17,13 +17,13 @@ const Navbar = () => {
         >
           <FaGithub />
         </a>
-        <a
+        {/*<a
           href="https://x.com/brodie_lucht"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaSquareXTwitter />
-        </a>
+        </a>*/}
         <a
           href="https://www.instagram.com/brodie.lucht/"
           target="_blank"
