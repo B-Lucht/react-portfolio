@@ -5,27 +5,34 @@ import img_dsi_project from "../assets/projects/project-dsi.png";
 import img_cc_project from "../assets/projects/project-cybercert.png";
 
 export const HERO_TEXT =
-  "I'm a reliable and driven IT graduate majoring in Cyber Security, with strengths in full-stack development, cloud infrastructure (AWS), and secure system & network design. With hands-on experience in both development and leadership roles, I bring a customer-focused mindset and a passion for building impactful tech solutions.";
+  "I'm a reliable and driven IT graduate majoring in Cyber Security, with strengths in full-stack development, cloud infrastructure (AWS), and secure system, network design. With hands-on experience in both development and leadership roles, I bring a customer-focused mindset and a passion for building impactful tech solutions.";
 
   export const ABOUT_TEXT = 
-  "My passion for technology started early — sparked by CQUniversity's robotics competition in primary school. That experience ignited a lifelong curiosity that led me to establish a robotics club in high school and ultimately pursue a Bachelor of Information Technology, majoring in Cyber Security, which I completed with Distinction (GPA: 6.958).\n\n" +
-  "I've since gained hands-on experience across both technical and customer-facing roles — from supervising customer service teams to working as a software engineer on cloud-based projects. I enjoy solving complex problems and building secure, user-focused solutions that make a tangible impact.\n\n" +
-  "Outside of development, you'll find me exploring emerging tech, diving into AI, or helping organise online events in my discord gaming community. I value curiosity, continuous learning, and working with people who are just as passionate about technology and building something meaningful.";
+  "My passion for technology started early — sparked by the Central Queensland Robotics competition in primary school. That experience ignited a lifelong curiosity that led me to establish a robotics club in high school and ultimately pursue a Bachelor of Information Technology, majoring in Cyber Security, which I completed with Distinction (GPA: 6.958).\n\n" +
+  "Since then, I've built experience across software engineering, enterprise IT support, and customer-facing leadership roles. From developing cloud-based applications as a Software Engineer to delivering frontline ICT support within a university environment, I enjoy bridging technical problem-solving with clear communication to deliver reliable, user-focused outcomes.\n\n" +
+  "Outside of work, you'll find me exploring emerging technologies, experimenting with AI and cloud platforms, or helping organise and run online events within my Discord gaming community. I value curiosity, continuous learning, and collaborating with people who are driven to build practical, meaningful solutions.";
 
 export const EXPERIENCES = [
     {
-        year:"November 2024 — Present",
+        year:"August 2025 — Present",
+        role:"Technical and Services Support Assistant",
+        company:"CQUniversity",
+        description: "Provide frontline ICT and services support as part of CQUniversity's Technology and Services Assistance Centre (TASAC). Diagnose and resolve technical issues across devices, operating systems, and enterprise applications, escalating complex cases when required. Deliver high-quality customer service via phone, and written communication while documenting solutions and contributing to knowledge bases.",
+        technologies: ["Microsoft Intune", "Microsoft 365", "Windows", "macOS", "Service desk & ITSM"],
+    },
+    {
+        year:"November 2024 — August 2025",
         role:"Software Engineer",
         company:"CyberCert",
         description: "Develop full-stack web applications using React, Next.js, and AWS Amplify. Contributed to building secure, scalable infrastructure with Lambda, DynamoDB, and S3. Worked closely with cross-functional teams using Jira, Confluence, and Figma, delivering agile solutions aligned to client needs.",
         technologies:["AWS Amplify", "JavaScript","TypeScript", "React", "Next.js", "Tailwind"],
     },
     {
-        year:"January 2021 — Present",
+        year:"January 2021 — October 2025",
         role:"Customer Service Assistant / Frontend Shift Supervisor",
         company:"Drakes Supermarkets",
         description: "Progressed from entry-level team member to trusted supervisor. Coordinate frontend operations, supervise staff, handle customer queries, and resolve discrepancies. Maintain compliance, perform end-of-day balancing, and ensure excellent customer experience.",
-        technologies:[],
+        technologies:["POS Systems", "Retail Management Systems"],
     }
 ];
 

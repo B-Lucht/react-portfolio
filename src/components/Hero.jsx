@@ -30,7 +30,7 @@ const Hero = () => {
               animate="visible"
               className="text-hero"
             >
-              IT Graduate • Cyber Security • Developer
+              BIT Graduate • Cyber Security • Developer
             </motion.span>
 
             <motion.span
